@@ -1,0 +1,356 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.navbar{
+  
+  background-color: #e9d2dd;
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 1200px;
+
+}
+.navbar-links{
+  display: flex;
+  list-style-type: none ;
+  gap: 1.5em; ;
+  padding: 0;
+  margin: 0;
+}
+.navbar-links li{
+  display: inline-block;
+  padding: 0 20px
+}
+
+.navbar-links a {
+  color: #161515; /* White text */
+  text-decoration: none; 
+  font-size: 1.3rem; 
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.3s ease; 
+}
+
+.navbar-links a:hover {
+  color: #ff6347; 
+}
+
+.navbar-links a.active {
+  color: #ff6347; /* Highlight active link */
+  font-weight: bold;
+}
+
+  /* Search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between input and button */
+}
+
+/* Search input field */
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 1rem;
+  outline: none; 
+  
+}
+
+/* Search input focus state */
+.search-input:focus {
+  border-color: #ff6347; 
+}
+
+/* Search button */
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff6347; /* Button color */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px; 
+  font-size: 1rem;
+  cursor: pointer; 
+}
+
+/* Search button hover state */
+.search-button:hover {
+  background-color: #38e70c; /* Darker color on hover */
+}
+
+/*strling card
+/* Project card container */
+.project-card-container{
+  display: flex;
+  overflow:auto ;
+  text-align: center;
+  
+
+}
+.project-card {
+
+  background-color: #dfdae4; /* White background */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  
+  margin: 2rem 0; /* Space between cards */
+  max-width: 400px; /* Limit card width */
+  flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.5rem; /* Larger font size */
+  margin-bottom: 0.5rem; /* Space below title */
+  color: #333; /* Dark text color */
+}
+
+/* Project description */
+.project-description {
+  font-size: 1rem; /* Standard font size */
+  color: #666; /* Medium gray text color */
+  margin-bottom: 1rem; /* Space below description */
+}
+
+/* Project image */
+.project-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px; /* Slightly rounded corners */
+  margin-bottom: 1rem; /* Space below image */
+}
+
+/* User ID text */
+.project-user-id {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #888; /* Light gray text color */
+  margin-bottom: 1rem; /* Space below user ID */
+}
+
+/* Project actions container */
+.project-actions {
+  display: flex;
+  gap: 0.5rem; /* Space between buttons */
+}
+
+/* Apply button */
+.apply-button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50; /* Green background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Apply button hover effect */
+.apply-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Update button */
+.update-button {
+  padding: 0.5rem 1rem;
+  background-color: #2196F3; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Update button hover effect */
+.update-button:hover {
+  background-color: #1e88e5; /* Darker blue on hover */
+}
+
+/* Delete button */
+.delete-button {
+  padding: 0.5rem 1rem;
+  background-color: #f44336; /* Red background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Delete button hover effect */
+.delete-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+/* Project container */
+.project-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project list title */
+.project-list-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Project list */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Edit form */
+.edit-form {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Edit form title */
+.edit-form-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Form label */
+.form-label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Form input */
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Form input focus */
+.form-input:focus {
+  border-color: #2196f3;
+}
+
+/* Form textarea */
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+/* Form textarea focus */
+.form-textarea:focus {
+  border-color: #2196f3;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Save button */
+.save-button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Save button hover */
+.save-button:hover {
+  background-color: #45a049;
+}
+
+/* Cancel button */
+.cancel-button {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cancel button hover */
+.cancel-button:hover {
+  background-color: #e53935;
+}
