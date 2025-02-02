@@ -59,7 +59,7 @@
 }
 
 .navbar-links a {
-  color: #161515; /* White text */
+  color: #161515; 
   text-decoration: none; 
   font-size: 1.3rem; 
   font-weight: 500;
@@ -72,7 +72,7 @@
 }
 
 .navbar-links a.active {
-  color: #ff6347; /* Highlight active link */
+  color: #ff6347; 
   font-weight: bold;
 }
 
@@ -80,10 +80,10 @@
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Space between input and button */
+  gap: 0.5rem; 
 }
 
-/* Search input field */
+
 .search-input {
   padding: 0.5rem;
   border: 1px solid #ccc; 
@@ -101,8 +101,8 @@
 /* Search button */
 .search-button {
   padding: 0.5rem 1rem;
-  background-color: #ff6347; /* Button color */
-  color: #fff; /* White text */
+  background-color: #ff6347; 
+  color: #fff; 
   border: none;
   border-radius: 4px; 
   font-size: 1rem;
@@ -114,7 +114,7 @@
   background-color: #38e70c; /* Darker color on hover */
 }
 
-/*strling card
+
 /* Project card container */
 .project-card-container{
   display: flex;
@@ -150,47 +150,47 @@
 
 /* Project description */
 .project-description {
-  font-size: 1rem; /* Standard font size */
-  color: #666; /* Medium gray text color */
-  margin-bottom: 1rem; /* Space below description */
+  font-size: 1rem; 
+  color: #666; 
+  margin-bottom: 1rem; 
 }
 
 /* Project image */
 .project-image {
-  width: 100%; /* Full width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 4px; /* Slightly rounded corners */
-  margin-bottom: 1rem; /* Space below image */
+  width: 100%; 
+  height: auto; 
+  border-radius: 4px; 
+  margin-bottom: 1rem; 
 }
 
 /* User ID text */
 .project-user-id {
-  font-size: 0.9rem; /* Smaller font size */
-  color: #888; /* Light gray text color */
-  margin-bottom: 1rem; /* Space below user ID */
+  font-size: 0.9rem; 
+  color: #888; 
+  margin-bottom: 1rem; 
 }
 
 /* Project actions container */
 .project-actions {
   display: flex;
-  gap: 0.5rem; /* Space between buttons */
+  gap: 0.5rem; 
 }
 
 /* Apply button */
 .apply-button {
   padding: 0.5rem 1rem;
-  background-color: #4CAF50; /* Green background */
-  color: #fff; /* White text */
+  background-color: #4CAF50; 
+  color: #fff; 
   border: none;
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 4px; 
   font-size: 1rem;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Smooth transition */
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
-/* Apply button hover effect */
+
 .apply-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #45a049; 
 }
 
 /* Update button */
