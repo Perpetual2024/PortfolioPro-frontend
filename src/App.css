@@ -125,26 +125,25 @@
 }
 .project-card {
 
-  background-color: #dfdae4; /* White background */
-  border: 1px solid #e0e0e0; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #dfdae4; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   
-  margin: 2rem 0; /* Space between cards */
-  max-width: 400px; /* Limit card width */
+  margin: 2rem 0;
+  max-width: 400px; 
   flex: 0 0 auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for project card */
 .project-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 /* Project title */
 .project-title {
-  font-size: 1.5rem; /* Larger font size */
+  font-size: 1.5rem; 
   margin-bottom: 0.5rem; /* Space below title */
   color: #333; /* Dark text color */
 }
@@ -229,128 +228,146 @@
 }
 
 /* Project container */
+
 .project-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Project list title */
-.project-list-title {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* Project list */
-.project-list {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center; /* Center the project-list horizontally */
 }
 
-/* Edit form */
-.edit-form {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+.project-list-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center; /* Center the cards horizontally */
+  max-width: 1200px; /* Optional: Limit the maximum width of the card container */
+  width: 100%; /* Ensure it takes full width within the container */
+}
+
+.project-card-container {
+  flex: 1 1 calc(50% - 16px); /* Each card takes 50% of the width minus half the gap */
+  max-width: calc(50% - 16px); /* Ensures two cards fit in a row */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+}
+
+.project-card {
+  border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 16px;
+  text-align: center; /* Center the content inside the card */
+  background-color: #f9f9f9;
+  width: 100%; /* Ensure the card takes full width of its container */
+  max-width: 400px; /* Optional: Limit the maximum width of each card */
 }
 
-/* Edit form title */
-.edit-form-title {
+.project-title {
   font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-user-id {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.project-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 500px; /* Optional: Limit the width of the edit form */
+  width: 100%;
+}
+
+.edit-form-title {
+  margin-bottom: 10px;
   text-align: center;
 }
 
-/* Form group */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
-/* Form label */
 .form-label {
   display: block;
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 
-/* Form input */
-.form-input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-/* Form input focus */
-.form-input:focus {
-  border-color: #2196f3;
-}
-
-/* Form textarea */
+.form-input,
 .form-textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-  resize: vertical;
 }
 
-/* Form textarea focus */
-.form-textarea:focus {
-  border-color: #2196f3;
-}
-
-/* Form actions */
 .form-actions {
+  margin-top: 10px;
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  justify-content: center; /* Center the form buttons horizontally */
+  gap: 10px; /* Add space between buttons */
 }
 
-/* Save button */
-.save-button {
-  padding: 0.5rem 1rem;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Save button hover */
-.save-button:hover {
-  background-color: #45a049;
-}
-
-/* Cancel button */
+.save-button,
 .cancel-button {
-  padding: 0.5rem 1rem;
-  background-color: #f44336;
-  color: #fff;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-/* Cancel button hover */
-.cancel-button:hover {
-  background-color: #e53935;
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
 }
