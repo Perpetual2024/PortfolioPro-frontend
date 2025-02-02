@@ -32,7 +32,7 @@ const SkillList = ({ projectId }) => {
         body: JSON.stringify({ projectId, skillId: selectedSkill }),
       });
 
-      console.log('Skill added to project');
+      alert('Skill added to project');
     } catch (error) {
       console.error('Error linking skill to project:', error);
     }
@@ -55,7 +55,7 @@ const SkillList = ({ projectId }) => {
       setSkills([...skills, createdSkill]);
       setNewSkill({ name: '', details: '' });
 
-      console.log('New skill created');
+      alert('New skill created');
     } catch (error) {
       console.error('Error creating skill:', error);
     }
@@ -67,7 +67,7 @@ const SkillList = ({ projectId }) => {
 
       {/* Select and Add Existing Skill */}
       <select onChange={(e) => setSelectedSkill(e.target.value)} value={selectedSkill}>
-  <option value="">Select a skill</option>
+  <option value="">View a skill</option>
   {skills.map((skill) => (
     <option key={skill.id} value={skill.id}>
       {skill.name} ({skill.details})
