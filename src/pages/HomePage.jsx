@@ -14,6 +14,9 @@ function HomePage() {
 
       <h1>Showcase Your Work with PortfolioPro</h1>
       <p>Ready to take your portfolio to the next level? Join PortfolioPro today and start building your online presence. Whether you're showcasing your latest project or exploring the work of others, PortfolioPro is here to help you shine</p>
+
+      <h2>To note</h2>
+      <p>The edit form is below the project cards.Can you remember that!!</p>
       <div>
         < ProjectList/>
         <li>
