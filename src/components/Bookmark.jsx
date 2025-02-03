@@ -100,7 +100,7 @@ const BookmarkForm = () => {
       </form>
 
       {selectedProject && (
-        <p>
+        <p className={bookmarkedProjects.has(selectedProject) ? "bookmarked" : "not-bookmarked"}>
           {bookmarkedProjects.has(selectedProject) ? "✅ Bookmarked!" : "❌ Not bookmarked."}
         </p>
       )}

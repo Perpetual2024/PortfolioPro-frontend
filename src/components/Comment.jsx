@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Comments = () => {
   const [projects, setProjects] = useState([]);
   const [selectedProjectId, setSelectedProjectId] = useState("");
   const [content, setContent] = useState("");
   const [userId, setUserId] = useState("");
-  const [comments, setComments] = useState([]); // Ensuring it's an array
+  const [comments, setComments] = useState([]);
   const [loadingProjects, setLoadingProjects] = useState(false);
   const [loadingComments, setLoadingComments] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -34,40 +34,25 @@ const Comments = () => {
   // Fetch existing comments for the selected project
   useEffect(() => {
     if (!selectedProjectId) {
-      setComments([]); // Reseting
+      setComments([]); // Reset comments when no project is selected
       return;
     }
 
     const fetchComments = async () => {
       setLoadingComments(true);
       try {
-        console.log("Fetching comments...");
-
-    
         const response = await fetch("http://127.0.0.1:5555/comment");
         if (!response.ok) {
           throw new Error("Failed to fetch comments");
         }
-
         const data = await response.json();
-        console.log("Raw comments response:", data); // Debugging output
-
-        if (!Array.isArray(data)) {
-          console.error("Unexpected response format:", data);
-          setComments([]);
-          return;
-        }
-
-        // Filter comments for the selected project
         const filteredComments = data.filter(
           (comment) => comment.project_id === Number(selectedProjectId)
         );
-        console.log("Filtered comments:", filteredComments); // Debugging output
-
         setComments(filteredComments);
       } catch (error) {
-        console.error("Error fetching comments:", error);
         setComments([]);
+        setErrorMessage("Error fetching comments: " + error.message);
       } finally {
         setLoadingComments(false);
       }
@@ -100,61 +85,69 @@ const Comments = () => {
         throw new Error("Failed to submit comment");
       }
 
-      // Reset form after submission
-      setContent("");
-      setUserId("");
-
-      // Re-fetch comments after submitting
       const newComment = await response.json();
       setComments((prevComments) => [...prevComments, newComment]);
+      setContent("");
+      setUserId("");
     } catch (error) {
-      console.error("Error submitting comment:", error);
       alert("Error submitting comment: " + error.message);
     }
   };
 
   return (
-    <div>
+    <div className="comments-container">
       <h3>Comments</h3>
 
       {/* Error message display */}
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       {/* Comment form */}
-      <form onSubmit={handleSubmitComment}>
-        <label htmlFor="user_id">User ID:</label>
-        <input
-          id="user_id"
-          type="text"
-          value={userId}
-          onChange={(e) => setUserId(e.target.value)}
-          placeholder="Enter your user ID"
-        />
+      <form onSubmit={handleSubmitComment} className="comment-form">
+        <div className="form-group">
+          <label htmlFor="user_id">User ID:</label>
+          <input
+            id="user_id"
+            type="text"
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+            placeholder="Enter your user ID"
+            className="form-input"
+          />
+        </div>
 
-        <label htmlFor="project">Select Project:</label>
-        <select
-          id="project"
-          value={selectedProjectId}
-          onChange={(e) => setSelectedProjectId(e.target.value)}
-        >
-          <option value="">Select a project</option>
-          {loadingProjects ? (
-            <option>Loading projects...</option>
-          ) : (
-            projects.map((project) => (
-              <option key={project.id} value={project.id}>
-                {project.title}
-              </option>
-            ))
-          )}
-        </select>
+        <div className="form-group">
+          <label htmlFor="project">Select Project:</label>
+          <select
+            id="project"
+            value={selectedProjectId}
+            onChange={(e) => setSelectedProjectId(e.target.value)}
+            className="form-input"
+          >
+            <option value="">Select a project</option>
+            {loadingProjects ? (
+              <option>Loading projects...</option>
+            ) : (
+              projects.map((project) => (
+                <option key={project.id} value={project.id}>
+                  {project.title}
+                </option>
+              ))
+            )}
+          </select>
+        </div>
 
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder="Add a comment..."
-        />
-        <button type="submit">Submit</button>
+        <div className="form-group">
+          <label htmlFor="content">Comment:</label>
+          <textarea
+            id="content"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            placeholder="Add a comment..."
+            className="form-input"
+          />
+        </div>
+
+        <button type="submit" className="submit-btn">Submit</button>
       </form>
 
       {/* Displaying existing comments */}
@@ -162,13 +155,11 @@ const Comments = () => {
       {loadingComments ? (
         <p>Loading comments...</p>
       ) : (
-        <ul>
+        <ul className="comments-list">
           {comments.length > 0 ? (
             comments.map((comment) => (
-              <li key={comment.id}>
-                <p>
-                  <strong>{comment.user_id}</strong>: {comment.content}
-                </p>
+              <li key={comment.id} className="comment-item">
+                <p><strong>{comment.user_id}</strong>: {comment.content}</p>
               </li>
             ))
           ) : (

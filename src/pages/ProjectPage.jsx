@@ -22,6 +22,7 @@ import BookmarkForm from '../components/Bookmark';
                  <Comments />
 
                  <BookmarkForm />
+                 
           </div>
         );
       }
