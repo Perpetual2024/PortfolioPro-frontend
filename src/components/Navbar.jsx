@@ -11,6 +11,9 @@ function Navbar(){
               <Link to="/">PortfolioPro</Link>
             </li>
             <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
               <Link to="/profiles">ProfilePage</Link>
             </li>
             <li>

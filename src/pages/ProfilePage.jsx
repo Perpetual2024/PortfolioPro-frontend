@@ -25,7 +25,7 @@ const ProfilePage = () => {
       });
       const addedUser = await response.json();
       setUsers([...users, addedUser]);
-      setNewUser({ username: '', email: '' }); // Reset form
+      setNewUser({ username: '', email: '' }); 
       alert('User added successfully!');
     } catch (error) {
       console.error('Error adding user:', error);
@@ -45,7 +45,7 @@ const ProfilePage = () => {
       });
       const updatedUser = await response.json();
       setUsers(users.map((user) => (user.id === editUser.id ? updatedUser : user)));
-      setEditUser(null); // Clear edit form
+      setEditUser(null); 
       alert('User updated successfully!');
     } catch (error) {
       console.error('Error updating user:', error);

@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProjectPage'
 import Comments from './components/Comment'
 import Bookmark   from './components/Bookmark'
 import SkillList from './components/SkillList'
+import About from './pages/About'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/comments" element={<Comments />} />
           <Route path="/bookmarks" element={<Bookmark />} />
           <Route path="/skills" element={<SkillList />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
