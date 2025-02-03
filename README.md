@@ -1,11 +1,9 @@
-# React + Vite
 
 # PortfolioPro Frontend
 
 PortfolioPro is a **full-stack portfolio management application** that allows users to create, update, and showcase their projects while associating skills and adding bookmarks and comments.
 
 ## 🚀 Features
-- **User Authentication** – Users can sign up and manage their own portfolios.
 - **Project Management** – Users can create, edit, and delete projects.
 - **Skills Association** – Assign skills to projects from a dropdown list.
 - **Bookmarks & Comments** – Public bookmarking and commenting system.
@@ -13,7 +11,7 @@ PortfolioPro is a **full-stack portfolio management application** that allows us
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, React Router
-- **Styling:** CSS, Tailwind (if used later)
+- **Styling:** CSS, Tailwind 
 - **Backend API:** Flask (Interacts with PortfolioPro Backend)
 - **Deployment:** Vercel (Frontend) & Render (Backend)
 
@@ -34,7 +32,7 @@ PortfolioPro-frontend/
 ## ⚡ Installation & Setup
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/your-username/PortfolioPro-frontend.git
+   git clone https://github.com/Perpetual2024/PortfolioPro-frontend.git
    cd PortfolioPro-frontend
    ```
 2. **Install Dependencies**
