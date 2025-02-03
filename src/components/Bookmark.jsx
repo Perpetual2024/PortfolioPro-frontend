@@ -11,12 +11,12 @@ const BookmarkForm = () => {
     const fetchData = async () => {
       try {
         // Fetch projects
-        const projectResponse = await fetch("http://127.0.0.1:5555/projects");
+        const projectResponse = await fetch("https://portfoliopro-477e.onrender.com/projects");
         const projectData = await projectResponse.json();
         setProjects(projectData);
 
         // Fetch existing bookmarks
-        const bookmarkResponse = await fetch("http://127.0.0.1:5555/bookmark");
+        const bookmarkResponse = await fetch("https://portfoliopro-477e.onrender.com/bookmark");
         const bookmarkData = await bookmarkResponse.json();
         const bookmarkedIds = new Set(bookmarkData.map((b) => b.project_id));
         setBookmarkedProjects(bookmarkedIds);
@@ -42,7 +42,7 @@ const BookmarkForm = () => {
     console.log("Request Body:", requestBody); // Log the request body
 
     try {
-      const response = await fetch("http://127.0.0.1:5555/bookmark", {
+      const response = await fetch("https://portfoliopro-477e.onrender.com/bookmark", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),

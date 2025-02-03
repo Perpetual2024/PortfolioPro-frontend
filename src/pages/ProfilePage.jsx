@@ -6,7 +6,7 @@ const ProfilePage = () => {
   const [editUser, setEditUser] = useState(null); // For editing a user
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/user')
+    fetch('https://portfoliopro-477e.onrender.com/user')
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error('Error fetching users:', error));
@@ -18,7 +18,7 @@ const ProfilePage = () => {
     if (!newUser.username || !newUser.email) return alert('Please fill all fields.');
 
     try {
-      const response = await fetch('http://127.0.0.1:5555/user', {
+      const response = await fetch('https://portfoliopro-477e.onrender.com/user', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newUser),
@@ -38,7 +38,7 @@ const ProfilePage = () => {
     if (!editUser.username || !editUser.email) return alert('Please fill all fields.');
 
     try {
-      const response = await fetch(`http://127.0.0.1:5555/user/${editUser.id}`, {
+      const response = await fetch(`https://portfoliopro-477e.onrender.com/user/${editUser.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editUser),
@@ -55,7 +55,7 @@ const ProfilePage = () => {
   // Handle deleting a user
   const handleDeleteUser = async (userId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5555/user/${userId}`, {
+      const response = await fetch(`https://portfoliopro-477e.onrender.com/user/${userId}`, {
         method: 'DELETE',
       });
       if (response.ok) {

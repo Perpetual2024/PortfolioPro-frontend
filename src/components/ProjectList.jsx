@@ -12,7 +12,7 @@ function ProjectList() {
   });
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5555/projects")
+    fetch("https://portfoliopro-477e.onrender.com/projects")
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error(error));
@@ -43,7 +43,7 @@ function ProjectList() {
 
   const handleSubmitEdit = (e) => {
     e.preventDefault();
-    fetch('http://127.0.0.1:5555/projects/${projectToEdit.id}', {
+    fetch('https://portfoliopro-477e.onrender.com/projects/${projectToEdit.id}', {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

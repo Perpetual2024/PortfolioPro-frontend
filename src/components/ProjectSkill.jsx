@@ -11,7 +11,7 @@ const ProjectSkillForm = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5555/skill');
+        const response = await fetch('https://portfoliopro-477e.onrender.com/skill');
         if (response.ok) {
           const data = await response.json();
           setSkills(data);
@@ -26,7 +26,7 @@ const ProjectSkillForm = () => {
     // Fetch projects from backend
     const fetchProjects = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5555/projects');
+        const response = await fetch('https://portfoliopro-477e.onrender.com/projects');
         if (response.ok) {
           const data = await response.json();
           setProjects(data);
@@ -46,7 +46,7 @@ const ProjectSkillForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://127.0.0.1:5555/projectskill', {
+      const response = await fetch('https://portfoliopro-477e.onrender.com/projectskill', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

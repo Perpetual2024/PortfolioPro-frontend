@@ -25,8 +25,8 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
 
     const method = projectToEdit ? "PUT" : "POST";
     const url = projectToEdit
-      ? `http://127.0.0.1:5555/projects/${projectToEdit.id}`
-      : "http://127.0.0.1:5555/projects";
+      ? `https://portfoliopro-477e.onrender.com/projects/${projectToEdit.id}`
+      : "https://portfoliopro-477e.onrender.com/projects";
 
     fetch(url, {
       method: method,

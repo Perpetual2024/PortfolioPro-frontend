@@ -15,7 +15,7 @@ const Comments = () => {
     const fetchProjects = async () => {
       setLoadingProjects(true);
       try {
-        const response = await fetch("http://127.0.0.1:5555/projects");
+        const response = await fetch("https://portfoliopro-477e.onrender.com/projects");
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
         }
@@ -41,7 +41,7 @@ const Comments = () => {
     const fetchComments = async () => {
       setLoadingComments(true);
       try {
-        const response = await fetch("http://127.0.0.1:5555/comment");
+        const response = await fetch("https://portfoliopro-477e.onrender.com/comment");
         if (!response.ok) {
           throw new Error("Failed to fetch comments");
         }
@@ -71,7 +71,7 @@ const Comments = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:5555/comment", {
+      const response = await fetch("https://portfoliopro-477e.onrender.com/comment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

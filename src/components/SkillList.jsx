@@ -11,7 +11,7 @@ const SkillList = ({ projectId }) => {
 
   const fetchSkills = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5555/skill');
+      const response = await fetch('https://portfoliopro-477e.onrender.com/skill');
       const data = await response.json();
       setSkills(data);
     } catch (error) {
@@ -26,7 +26,7 @@ const SkillList = ({ projectId }) => {
     }
 
     try {
-      await fetch('http://127.0.0.1:5555/projectskill', {
+      await fetch('https://portfoliopro-477e.onrender.com/projectskill', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ projectId, skillId: selectedSkill }),
@@ -45,7 +45,7 @@ const SkillList = ({ projectId }) => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:5555/skill', {
+      const response = await fetch('https://portfoliopro-477e.onrender.com/skill', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newSkill),
