@@ -12,7 +12,7 @@ PortfolioPro is a **full-stack portfolio management application** that allows us
 - **Responsive UI** – Clean and user-friendly interface built with React.
 
 ## 🛠️ Tech Stack
-- **Frontend:** React, React Router, Formik
+- **Frontend:** React, React Router
 - **Styling:** CSS, Tailwind (if used later)
 - **Backend API:** Flask (Interacts with PortfolioPro Backend)
 - **Deployment:** Vercel (Frontend) & Render (Backend)
@@ -23,10 +23,10 @@ PortfolioPro-frontend/
 │── src/
 │   ├── components/
 │   ├── pages/
-│   ├── styles/
-│   ├── App.jsx
-│   ├── index.js
-│── public/
+│   ├── App.css/
+│   ├── App.jsx/
+│   ├── index.css/
+│   ├── main.jsx
 │── package.json
 │── README.md
 ```
@@ -47,15 +47,21 @@ PortfolioPro-frontend/
    ```
 
 ## 🔗 Backend API Configuration
-Make sure your **PortfolioPro backend** is running and update the API URLs in your frontend code.
-Example API Base URL:
+Make sure your **PortfolioPro backend** is running on
+ Base URL:
+ 
 ```sh
-http://127.0.0.1:5555
+https://portfoliopro-477e.onrender.com/ 
+
 ```
-Or with gunicorn :
-```sh
-http://127.0.0.1:8000
-```
+The end points are:
+- projects
+- skill
+- projectskill
+- user
+- comment
+- bookmark
+
 
 ## 🚀 Deployment on Vercel
 1. **Build the Project**
