@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+ 
 
 function ProjectForm({ handleAddProject , projectToEdit}) {
   const [projectName, setProjectName] = useState({
@@ -8,7 +9,7 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
     user_id: 0,
   });
 
-  useEffect(()=> {
+  useEffect(() => {
     if (projectToEdit) {
       setProjectName(projectToEdit);
     }
@@ -24,11 +25,11 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
 
     const method = projectToEdit ? "PUT" : "POST";
     const url = projectToEdit
-    ? `http://127.0.0.1:5555/projects/${projectToEdit.id}`
-    : "http://127.0.0.1:5555/projects";
+      ? `http://127.0.0.1:5555/projects/${projectToEdit.id}`
+      : "http://127.0.0.1:5555/projects";
 
     fetch(url, {
-      method: "POST",
+      method: method,
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,39 +41,52 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>{projectToEdit ? "Edit Project" : "Add Project"}</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Project name"
-          value={projectName.title}
-          onChange={handleProjectChange}
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="Project description"
-          value={projectName.description}
-          onChange={handleProjectChange}
-        />
-        <input
-          type="text"
-          name="image"
-          placeholder="image"
-          value={projectName.image}
-          onChange={handleProjectChange}
-        />
-        
-        <input
-          type="number"
-          name="user_id"
-          placeholder="User ID"
-          value={projectName.user_id}
-          onChange={handleProjectChange}
-        />
-        <button type="submit">{projectToEdit ? "Update Project" : "Add Project"}</button>
+      <form onSubmit={handleSubmit} className="project-form">
+        <div className="form-group">
+          <input
+            type="text"
+            name="title"
+            placeholder="Project name"
+            value={projectName.title}
+            onChange={handleProjectChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            name="description"
+            placeholder="Project description"
+            value={projectName.description}
+            onChange={handleProjectChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="text"
+            name="image"
+            placeholder="Image URL"
+            value={projectName.image}
+            onChange={handleProjectChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="number"
+            name="user_id"
+            placeholder="User ID"
+            value={projectName.user_id}
+            onChange={handleProjectChange}
+            className="form-input"
+          />
+        </div>
+        <button type="submit" className="submit-btn">
+          {projectToEdit ? "Update Project" : "Add Project"}
+        </button>
       </form>
     </div>
   );

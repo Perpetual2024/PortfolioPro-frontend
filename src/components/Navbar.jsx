@@ -10,8 +10,9 @@ function Navbar(){
             <li>
               <Link to="/">PortfolioPro</Link>
             </li>
-          
-            
+            <li>
+              <Link to="/profiles">ProfilePage</Link>
+            </li>
             <li>
               <Link to="/projects">ProjectPage</Link>
             </li>
