@@ -37,7 +37,7 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
     })
       .then((response) => response.json())
       .then((project) => handleAddProject(project))
-      .catch((error) => alert.error(error));
+      .catch((error) => console.error(error));
   };
 
   return (
