@@ -46,10 +46,12 @@ PortfolioPro-frontend/
 
 ## 🔗 Backend API Configuration
 Make sure your **PortfolioPro backend** is running on
- Base URL:
- 
+ Base URl
+[Click here to view the DEPLOYED backened](https://portfoliopro-477e.onrender.com/)
+
+Link to backend API:
 ```sh
-https://portfoliopro-477e.onrender.com/ 
+ https://github.com/Perpetual2024/PortfolioPro
 
 ```
 The end points are:
@@ -77,7 +79,10 @@ The end points are:
      ```
    - Follow the instructions to complete deployment.
    - Your frontend will be live on Vercel.
-   -The deployment for this application is ```sh https://portfolio-pro-frontend.vercel.app/```
+   -The deployment for this application is 
+   ##Live demo
+   [Click here to view the live demo](https://portfolio-pro-frontend.vercel.app/
+   
 
 ## 📌 Roadmap
 - [ ] Improve UI with CSS
